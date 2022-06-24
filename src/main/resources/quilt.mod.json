@@ -15,11 +15,13 @@
 				"issues": "https://github.com/peanutbutter144/timestamp-chat/issues",
 				"sources": "https://github.com/peanutbutter144/timestamp-chat"
 			},
+			"license": "MIT",
 			"icon": "assets/timestamp_chat/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "cc.abbie.timestamp_chat.TimestampChat"
+			"client_init": "cc.abbie.timestamp_chat.ClientMod",
+			"modmenu": "cc.abbie.timestamp_chat.ModMenu"
 		},
 		"depends": [
 			{
@@ -27,10 +29,21 @@
 				"versions": ">=0.17.0-"
 			},
 			{
+				"id": "quilted_fabric_api",
+				"versions": ">=2.0.0-"
+			},
+			{
 				"id": "minecraft",
 				"versions": ">=1.19"
+			},
+			{
+				"id": "cloth-config",
+				"versions": ">=7.0.72"
 			}
 		]
+	},
+	"minecraft": {
+		"environment": "client"
 	},
 	"mixin": "timestamp_chat.mixins.json"
 }
