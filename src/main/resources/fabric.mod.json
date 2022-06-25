@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "timestamp_chat",
+  "version": "${version}",
+  "name": "Timestamp Chat",
+  "description": "Adds timestamps to chat.",
+  "authors": [
+    "Abbie"
+  ],
+  "contact": {
+    "homepage": "https://github.com/peanutbutter144/timestamp-chat",
+    "issues": "https://github.com/peanutbutter144/timestamp-chat/issues",
+    "sources": "https://github.com/peanutbutter144/timestamp-chat"
+  },
+  "license": "MIT",
+  "icon": "assets/timestamp_chat/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "modmenu": [
+      "cc.abbie.timestamp_chat.ModMenu"
+    ]
+  },
+  "mixins": [
+    "timestamp_chat.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "minecraft": "~1.19",
+    "java": ">=17",
+    "cloth-config": ">=7.0.72"
+  }
+}

@@ -5,7 +5,7 @@ import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
-import net.minecraft.text.component.TextComponent;
+import net.minecraft.text.TextContent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -20,7 +20,7 @@ public class ChatMixin {
 	public Text onAddMessage(Text message) {
 		Config config = AutoConfig.getConfigHolder(Config.class).getConfig();
 
-		return MutableText.create(TextComponent.EMPTY)
+		return MutableText.of(TextContent.EMPTY)
 				.append(new SimpleDateFormat(config.pattern).format(new Date()))
 				.append(" ")
 				.append(message);
