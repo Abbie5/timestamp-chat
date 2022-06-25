@@ -5,8 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [],
   "client": [
-    "ChatMixin",
-    "InitMixin"
+    "ChatMixin"
   ],
   "injectors": {
     "defaultRequire": 1

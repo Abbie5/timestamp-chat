@@ -1,4 +1,4 @@
-package cc.abbie.timestamp_chat;
+package cc.abbie.timestamp_chat.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 

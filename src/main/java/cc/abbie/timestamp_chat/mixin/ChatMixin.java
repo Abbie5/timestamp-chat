@@ -1,6 +1,6 @@
 package cc.abbie.timestamp_chat.mixin;
 
-import cc.abbie.timestamp_chat.Config;
+import cc.abbie.timestamp_chat.config.Config;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.text.MutableText;

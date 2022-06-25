@@ -16,8 +16,11 @@
   "icon": "assets/timestamp_chat/icon.png",
   "environment": "client",
   "entrypoints": {
+    "client": [
+      "cc.abbie.timestamp_chat.TimestampChatClient"
+    ],
     "modmenu": [
-      "cc.abbie.timestamp_chat.ModMenu"
+      "cc.abbie.timestamp_chat.compat.ModMenuPlugin"
     ]
   },
   "mixins": [
