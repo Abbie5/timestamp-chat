@@ -1,7 +1,9 @@
 package cc.abbie.timestamp_chat;
 
-import net.minecraft.text.Style;
-import net.minecraft.text.Text;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
+import net.minecraft.network.chat.FormattedText;
+import net.minecraft.network.chat.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -9,8 +11,8 @@ import java.util.Date;
 import static cc.abbie.timestamp_chat.TimestampChatClient.CONFIG;
 
 public class Timestamp {
-    public static Text create() {
-        return Text.literal(
+    public static Component create() {
+        return Component.literal(
                 new SimpleDateFormat(CONFIG.pattern).format(new Date())
         ).setStyle(Style.EMPTY.withColor(CONFIG.color));
     }
