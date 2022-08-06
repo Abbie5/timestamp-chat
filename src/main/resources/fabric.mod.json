@@ -27,9 +27,9 @@
     "timestamp_chat.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.6",
-    "minecraft": ">=1.19.1",
+    "fabricloader": ">=${loader_version}",
+    "minecraft": ">=${minecraft_version}",
     "java": ">=17",
-    "cloth-config": ">=8.0.75"
+    "cloth-config": ">=${cloth_config_version}"
   }
 }
