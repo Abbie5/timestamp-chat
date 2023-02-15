@@ -22,7 +22,7 @@ jobs:
       - uses: gradle/gradle-build-action@v2
         with:
           arguments: build
-      - uses: Kir-Antipov/mc-publish@v3
+      - uses: Kir-Antipov/mc-publish@v3.2
         with:
           modrinth-id: 2lAPv09G
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
