@@ -19,7 +19,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - uses: gradle/gradle-build-action@v2.2.1
+      - uses: gradle/gradle-build-action@v2.4.2
         with:
           arguments: build
       - uses: Kir-Antipov/mc-publish@v3.0
