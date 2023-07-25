@@ -60,12 +60,6 @@ compileJava {
 
 processResources {
     from project(":xplat").sourceSets.main.resources
-
-    inputs.property "version", project.version
-
-    filesMatching("mods.toml") {
-        expand "version": project.version
-    }
 }
 
 // configure the maven publication
