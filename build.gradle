@@ -6,5 +6,11 @@ subprojects {
         maven {
             url "https://maven.terraformersmc.com/"
         }
+        maven {
+            url "https://repo.spongepowered.org/repository/maven-public/"
+            content {
+                includeGroup "org.spongepowered"
+            }
+        }
     }
 }

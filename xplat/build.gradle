@@ -6,3 +6,9 @@ plugins {
 minivan {
     version(minecraft_version)
 }
+
+dependencies {
+    compileOnly "org.spongepowered:mixin:0.8.5"
+
+    compileOnly("me.shedaniel.cloth:cloth-config:${cloth_config_version}")
+}
