@@ -1,4 +1,4 @@
-package cc.abbie.timestamp_chat.compat;
+package cc.abbie.timestamp_chat.fabric.compat;
 
 import cc.abbie.timestamp_chat.config.Config;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;

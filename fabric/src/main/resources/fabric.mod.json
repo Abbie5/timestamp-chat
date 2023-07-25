@@ -17,10 +17,10 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "cc.abbie.timestamp_chat.TimestampChatClient"
+      "cc.abbie.timestamp_chat.fabric.TimestampChatFabricClient"
     ],
     "modmenu": [
-      "cc.abbie.timestamp_chat.compat.ModMenuPlugin"
+      "cc.abbie.timestamp_chat.fabric.compat.ModMenuPlugin"
     ]
   },
   "mixins": [
