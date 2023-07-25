@@ -13,7 +13,7 @@
     "sources": "https://github.com/peanutbutter144/timestamp-chat"
   },
   "license": "MIT",
-  "icon": "assets/timestamp_chat/icon.png",
+  "icon": "pack.png",
   "environment": "client",
   "entrypoints": {
     "client": [
