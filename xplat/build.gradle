@@ -3,6 +3,8 @@ plugins {
     id 'agency.highlysuspect.minivan' version '0.2'
 }
 
+archivesBaseName = "${project.archives_base_name}-xplat"
+
 minivan {
     version(minecraft_version)
 }
