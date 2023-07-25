@@ -62,6 +62,14 @@ processResources {
     from project(":xplat").sourceSets.main.resources
 }
 
+jar {
+    manifest {
+        attributes([
+                "Implementation-Version"  : project.jar.archiveVersion,
+        ])
+    }
+}
+
 // configure the maven publication
 publishing {
     publications {
