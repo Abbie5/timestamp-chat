@@ -25,9 +25,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - uses: gradle/gradle-build-action@v2.4.2
+    - uses: gradle/gradle-build-action@v2
       with:
         arguments: build
-    - uses: actions/upload-artifact@v3.1.0
+    - uses: actions/upload-artifact@v3
       with:
-        path: build/libs/*
+        path: |
+          fabric/build/libs/*
+          forge/build/libs/*
