@@ -1,0 +1,8 @@
+plugins {
+    id 'java'
+    id 'agency.highlysuspect.minivan' version '0.2'
+}
+
+minivan {
+    version(minecraft_version)
+}

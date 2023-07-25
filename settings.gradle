@@ -4,10 +4,14 @@ pluginManagement {
 			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
+		maven {
+			name = 'Sleeping Town'
+			url = 'https://repo.sleeping.town/'
+		}
 		mavenCentral()
 		gradlePluginPortal()
 	}
 }
 
 rootProject.name = "timestamp-chat"
-include("fabric")
+include("xplat", "fabric")
