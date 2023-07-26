@@ -30,6 +30,7 @@ jobs:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           curseforge-id: 373235
+          curseforge-name: ""
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
           
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,6 +43,7 @@ jobs:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           curseforge-id: 373235
+          curseforge-name: ""
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
           
           github-token: ${{ secrets.GITHUB_TOKEN }}
