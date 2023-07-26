@@ -26,6 +26,7 @@ jobs:
         with:
           files: fabric/build/libs/*
           modrinth-id: 2lAPv09G
+          modrinth-featured: false
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           curseforge-id: 373235
@@ -37,6 +38,7 @@ jobs:
         with:
           files: forge/build/libs/*
           modrinth-id: 2lAPv09G
+          modrinth-featured: false
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           curseforge-id: 373235
