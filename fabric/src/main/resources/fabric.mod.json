@@ -24,7 +24,7 @@
     ]
   },
   "mixins": [
-    "timestamp_chat.mixins.json"
+    "timestamp_chat.fabric.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.6",

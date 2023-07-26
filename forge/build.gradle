@@ -47,11 +47,6 @@ dependencies {
     implementation fg.deobf("me.shedaniel.cloth:cloth-config-forge:${project.cloth_config_version}")
 }
 
-mixin {
-    add sourceSets.main, "timestamp_chat.refmap.json"
-    config "timestamp_chat.mixins.json"
-}
-
 jar.finalizedBy('reobfJar')
 
 compileJava {
