@@ -26,3 +26,5 @@ side="BOTH"
 [[dependencies.timestamp_chat]]
 modId="cloth_config"
 mandatory=false
+versionRange="[0,)"
+side="CLIENT"
