@@ -23,9 +23,7 @@ jobs:
       - uses: Kir-Antipov/mc-publish@v3.3
         name: publish fabric
         with:
-          files: |
-            fabric/build/libs/*
-            !*-dev-shadow.jar
+          files: fabric/build/libs/!(*-@(dev-shadow|sources|javadoc)).jar
           modrinth-id: 2lAPv09G
           modrinth-featured: false
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
@@ -38,9 +36,7 @@ jobs:
       - uses: Kir-Antipov/mc-publish@v3.3
         name: publish neoforge
         with:
-          files: |
-            neoforge/build/libs/*
-            !*-dev-shadow.jar
+          files: neoforge/build/libs/!(*-@(dev-shadow|sources|javadoc)).jar
           modrinth-id: 2lAPv09G
           modrinth-featured: false
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
