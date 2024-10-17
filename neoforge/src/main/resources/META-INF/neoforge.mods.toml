@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+[[mods]]
+modId="timestamp_chat"
+version="${version}"
+displayName="Timestamp Chat"
+logoFile="pack.png"
+authors="Abbie"
+description='''
+Adds timestamps to chat.
+'''
+
+[[dependencies.timestamp_chat]]
+modId="neoforge"
+mandatory=true
+versionRange="[20.2,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.timestamp_chat]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.2,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.timestamp_chat]]
+modId="cloth_config"
+mandatory=false
+versionRange="[0,)"
+side="CLIENT"
