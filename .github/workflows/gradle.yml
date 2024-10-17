@@ -32,4 +32,4 @@ jobs:
       with:
         path: |
           fabric/build/libs/*
-          forge/build/libs/*
+          neoforge/build/libs/*

@@ -35,9 +35,9 @@ jobs:
           
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: Kir-Antipov/mc-publish@v3.2
-        name: publish forge
+        name: publish neoforge
         with:
-          files: forge/build/libs/*
+          files: neoforge/build/libs/*
           modrinth-id: 2lAPv09G
           modrinth-featured: false
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
