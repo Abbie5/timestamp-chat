@@ -1,7 +1,7 @@
-package cc.abbie.timestamp_chat.fabric;
+package cc.abbie.timestamp_chat.fabric.client;
 
-import cc.abbie.timestamp_chat.Timestamp;
-import cc.abbie.timestamp_chat.TimestampChatClient;
+import cc.abbie.timestamp_chat.client.Timestamp;
+import cc.abbie.timestamp_chat.client.TimestampChatClient;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents;
 import net.minecraft.client.Minecraft;

@@ -1,4 +1,4 @@
-package cc.abbie.timestamp_chat.config;
+package cc.abbie.timestamp_chat.client.config;
 
 public interface Config {
     String pattern();

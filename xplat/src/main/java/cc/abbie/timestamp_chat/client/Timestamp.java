@@ -1,4 +1,4 @@
-package cc.abbie.timestamp_chat;
+package cc.abbie.timestamp_chat.client;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
@@ -6,7 +6,7 @@ import net.minecraft.network.chat.Style;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static cc.abbie.timestamp_chat.TimestampChatClient.CONFIG;
+import static cc.abbie.timestamp_chat.client.TimestampChatClient.CONFIG;
 
 public class Timestamp {
     public static Component create() {

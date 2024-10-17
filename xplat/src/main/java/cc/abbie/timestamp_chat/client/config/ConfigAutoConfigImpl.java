@@ -1,14 +1,15 @@
-package cc.abbie.timestamp_chat.config;
+package cc.abbie.timestamp_chat.client.config;
 
+import cc.abbie.timestamp_chat.TimestampChat;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.minecraft.client.gui.screens.Screen;
 
-import static cc.abbie.timestamp_chat.config.DefaultConfigImpl.DEFAULT;
+import static cc.abbie.timestamp_chat.client.config.DefaultConfigImpl.DEFAULT;
 
-@me.shedaniel.autoconfig.annotation.Config(name = "timestamp_chat")
+@me.shedaniel.autoconfig.annotation.Config(name = TimestampChat.MODID)
 public class ConfigAutoConfigImpl implements ConfigData, Config {
 	public String pattern = DEFAULT.pattern();
 
