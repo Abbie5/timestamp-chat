@@ -4,3 +4,5 @@ build/
 *.iml
 
 .idea/
+
+.architectury-transformer/

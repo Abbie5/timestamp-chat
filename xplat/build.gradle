@@ -1,16 +1,13 @@
-plugins {
-    id 'java'
-    id 'agency.highlysuspect.minivan' version '0.2'
-}
-
-archivesBaseName = "${project.archives_base_name}-xplat"
-
-minivan {
-    version(minecraft_version)
+architectury {
+    common rootProject.enabled_platforms.split(',')
 }
 
 dependencies {
-    compileOnly "org.spongepowered:mixin:0.8.5"
+    // We depend on Fabric Loader here to use the Fabric @Environment annotations,
+    // which get remapped to the correct annotations on each platform.
+    // Do NOT use other classes from Fabric Loader.
+    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
 
-    compileOnly("me.shedaniel.cloth:cloth-config:${cloth_config_version}")
+    compileOnly("me.shedaniel.cloth:cloth-config:${rootProject.cloth_config_version}")
+//    modCompileOnly "me.shedaniel.cloth:cloth-config:15.0.140"
 }

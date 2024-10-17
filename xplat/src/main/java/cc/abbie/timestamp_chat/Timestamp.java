@@ -11,8 +11,8 @@ import static cc.abbie.timestamp_chat.TimestampChatClient.CONFIG;
 public class Timestamp {
     public static Component create() {
         return Component.literal(
-                new SimpleDateFormat(CONFIG.pattern).format(new Date())
-        ).setStyle(Style.EMPTY.withColor(CONFIG.color));
+                new SimpleDateFormat(CONFIG.pattern()).format(new Date())
+        ).setStyle(Style.EMPTY.withColor(CONFIG.color()));
     }
 
     public static Component addToMessage(Component message) {

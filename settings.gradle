@@ -9,24 +9,16 @@ pluginManagement {
 			url = 'https://maven.minecraftforge.net/'
 		}
 		maven {
-			name = 'Sleeping Town'
-			url = 'https://repo.sleeping.town/'
+			name = 'Architectury'
+			url = 'https://maven.architectury.dev/'
 		}
-		maven {
-			name = 'Spongepowered'
-			url = 'https://repo.spongepowered.org/repository/maven-public/'
-			content {
-				includeGroup 'org.spongepowered'
-			}
-		}
-		mavenCentral()
-		gradlePluginPortal()
+        gradlePluginPortal()
 	}
 }
 
 plugins {
-	id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+	id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
 }
 
 rootProject.name = "timestamp-chat"
-include("xplat", "fabric", "forge")
+include("xplat", "fabric", "neoforge")
