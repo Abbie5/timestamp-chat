@@ -25,10 +25,10 @@ subprojects {
 
     repositories {
         maven {
-            url "https://maven.shedaniel.me/"
+            url = "https://maven.shedaniel.me/"
         }
         maven {
-            url "https://maven.terraformersmc.com/"
+            url = "https://maven.terraformersmc.com/"
         }
         maven {
             name = 'NeoForged'

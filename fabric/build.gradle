@@ -30,9 +30,12 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     // modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    xplat(project(path: ':xplat')) { transitive false }
+    xplat(project(path: ':xplat')) { transitive = false }
     shadowBundle project(path: ':xplat', configuration: 'transformProductionFabric')
 
+    // Bundle the Fabric API modules we use so the mod works without the full Fabric API.
+    // fabric-api-base is required by fabric-message-api-v1.
+    include implementation(fabricApi.module("fabric-api-base", rootProject.fabric_api_version))
     include implementation(fabricApi.module("fabric-message-api-v1", rootProject.fabric_api_version))
 
     implementation("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {

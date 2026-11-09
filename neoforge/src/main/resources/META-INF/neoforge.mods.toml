@@ -5,7 +5,7 @@ license="MIT"
 modId="timestamp_chat"
 version="${version}"
 displayName="Timestamp Chat"
-logoFile="pack.png"
+iconFile="pack.png"
 authors="Abbie"
 description='''
 Adds timestamps to chat.
@@ -13,18 +13,18 @@ Adds timestamps to chat.
 
 [[dependencies.timestamp_chat]]
 modId="neoforge"
-mandatory=true
+type="required"
 versionRange="[26.2,)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.timestamp_chat]]
 modId="minecraft"
-mandatory=true
+type="required"
 versionRange="[26.2,26.3)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.timestamp_chat]]
 modId="cloth_config"
-mandatory=false
+type="optional"
 versionRange="[0,)"
 side="CLIENT"

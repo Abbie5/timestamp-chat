@@ -34,7 +34,7 @@ repositories {
 dependencies {
     neoForge "net.neoforged:neoforge:$rootProject.neoforge_version"
 
-    xplat(project(path: ':xplat')) { transitive false }
+    xplat(project(path: ':xplat')) { transitive = false }
     shadowBundle project(path: ':xplat', configuration: 'transformProductionNeoForge')
 
     implementation "me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}"
