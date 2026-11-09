@@ -1,5 +1,5 @@
 plugins {
-    id 'com.github.johnrengelman.shadow'
+    id 'com.gradleup.shadow'
 }
 
 architectury {
@@ -25,21 +25,21 @@ configurations {
 }
 
 dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+    implementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     // modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    xplat(project(path: ':xplat', configuration: 'namedElements')) { transitive false }
+    xplat(project(path: ':xplat')) { transitive false }
     shadowBundle project(path: ':xplat', configuration: 'transformProductionFabric')
 
-    include modImplementation(fabricApi.module("fabric-message-api-v1", rootProject.fabric_api_version))
+    include implementation(fabricApi.module("fabric-message-api-v1", rootProject.fabric_api_version))
 
-    modApi("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
+    implementation("me.shedaniel.cloth:cloth-config-fabric:${rootProject.cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 
-    modImplementation "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"
+    implementation "com.terraformersmc:modmenu:${rootProject.mod_menu_version}"
 }
 
 processResources {
@@ -50,11 +50,17 @@ processResources {
     }
 }
 
-shadowJar {
-    configurations = [project.configurations.shadowBundle]
-    archiveClassifier = 'dev-shadow'
+jar {
+    archiveClassifier = 'raw'
 }
 
-remapJar {
-    input.set shadowJar.archiveFile
+shadowJar {
+    dependsOn jar
+    mainSpec.sourcePaths.clear()
+    from(zipTree(jar.archiveFile))
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = null
+    zip64 = true
 }
+
+assemble.dependsOn shadowJar

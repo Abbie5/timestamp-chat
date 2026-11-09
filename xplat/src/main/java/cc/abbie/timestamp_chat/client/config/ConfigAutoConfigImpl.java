@@ -2,6 +2,7 @@ package cc.abbie.timestamp_chat.client.config;
 
 import cc.abbie.timestamp_chat.TimestampChat;
 import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.AutoConfigClient;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
@@ -28,11 +29,11 @@ public class ConfigAutoConfigImpl implements ConfigData, Config {
 	}
 
 	public static Config register() {
-		AutoConfig.register(ConfigAutoConfigImpl.class, Toml4jConfigSerializer::new);
+		AutoConfig.register(ConfigAutoConfigImpl.class, (config, configClass) -> new Toml4jConfigSerializer<>(config, configClass));
 		return AutoConfig.getConfigHolder(ConfigAutoConfigImpl.class).getConfig();
 	}
 
 	public static Screen openConfigScreen(Screen parent) {
-		return AutoConfig.getConfigScreen(ConfigAutoConfigImpl.class, parent).get();
+		return AutoConfigClient.getConfigScreen(ConfigAutoConfigImpl.class, parent).get();
 	}
 }

@@ -17,7 +17,7 @@ public class TimestampChatFabricClient implements ClientModInitializer {
 
         ClientReceiveMessageEvents.ALLOW_CHAT.register(
                 ((message, signedMessage, sender, params, receptionTimestamp) -> {
-                    Minecraft.getInstance().gui.getChat().addMessage(
+                    Minecraft.getInstance().gui.hud.getChat().addPlayerMessage(
                             Timestamp.addToMessage(message),
                             signedMessage == null ? null : signedMessage.signature(),
                             null

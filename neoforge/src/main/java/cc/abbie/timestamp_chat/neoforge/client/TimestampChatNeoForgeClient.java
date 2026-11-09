@@ -8,13 +8,12 @@ import cc.abbie.timestamp_chat.client.config.ConfigAutoConfigImpl;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModLoadingContext;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.ConfigScreenHandler;
 import net.neoforged.neoforge.client.event.ClientChatReceivedEvent;
-import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-@Mod.EventBusSubscriber(value = Dist.CLIENT, modid = TimestampChat.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(value = Dist.CLIENT, modid = TimestampChat.MODID)
 public class TimestampChatNeoForgeClient {
     @SubscribeEvent
     public static void onSetup(FMLClientSetupEvent e) {
@@ -22,16 +21,13 @@ public class TimestampChatNeoForgeClient {
 
         if (Platform.isClothConfigLoaded()) {
             ModLoadingContext.get().registerExtensionPoint(
-                    ConfigScreenHandler.ConfigScreenFactory.class,
-                    () -> new ConfigScreenHandler.ConfigScreenFactory(
-                            (client, parent) -> ConfigAutoConfigImpl.openConfigScreen(parent)
-                    )
+                    IConfigScreenFactory.class,
+                    () -> (client, parent) -> ConfigAutoConfigImpl.openConfigScreen(parent)
             );
         }
-
-        NeoForge.EVENT_BUS.addListener(TimestampChatNeoForgeClient::onChatReceived);
     }
 
+    @SubscribeEvent
     public static void onChatReceived(ClientChatReceivedEvent e) {
         e.setMessage(Timestamp.addToMessage(e.getMessage()));
     }
